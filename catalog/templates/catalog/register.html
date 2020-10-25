@@ -1,0 +1,43 @@
+
+
+<h1>REGISTER PAGE</h1>
+
+
+<form method='post' action="{% url 'register' %}">
+	{% csrf_token %} 
+	<div class="form-group"> 
+		{{ form.username.errors }}
+        <label><b>{{form.username.label}}: </b> </label> 
+        {{ form.username }} 
+    </div> 
+    <br><br>
+	<div class="form-group"> 
+		{{ form.password1.errors }}
+        <label><b>{{form.password1.label}}:</b> </label> 
+        {{ form.password1 }} 
+    </div> 
+    <br><br>
+
+    <div class="form-group"> 
+    	{{ form.password2.errors }}
+        <label><b>{{form.password2.label}}: </b> </label> 
+        {{ form.password2 }} 
+    </div> 
+    <br><br>
+    <div class="form-group"> 
+    	{{ form.email.errors }}
+        <label><b>{{form.email.label}}:</b> </label> 
+        {{ form.email }} 
+    </div> 
+    <br><br>
+
+    <div class="form-group"> 
+        {{ form.first_name.errors }}
+        <label><b>{{form.first_name.label}}:</b> </label> 
+        {{ form.first_name }} 
+    </div> 
+    <br><br>
+
+	<input type="submit" name="submit">
+</form>
+
